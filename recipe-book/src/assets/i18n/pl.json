@@ -1,0 +1,57 @@
+{
+  "header" : {
+    "recipeBook" : "Książka z przepisami",
+    "recipes" : "Przepisy",
+    "shoppingList" : "Lista zakupów",
+    "dashboard": "Dashboard",
+    "recipeManagement" : "Zarządzanie przepisami",
+    "storeRecipes" : "Zapisz recepty",
+    "retrieveRecipes" : "Pobierz recepty",
+    "signIn": "Zaloguj",
+    "logOut": "Wyloguj"
+  },
+  "recipes" : {
+    "selectRecipe" : "Wybierz przepis",
+    "name": "Nazwa",
+    "description" : "Opis",
+    "imageUrl" : "Adres do zdjęcia"
+  },
+  "shoppingList" : {
+    "name" : "Nazwa",
+    "amount": "Koszt"
+  },
+  "buttons" : {
+    "add" : "Dodaj",
+    "save" : "Zapisz",
+    "delete" : "Usuń",
+    "deleteItem" : "Usuń element",
+    "clear" : "Wyczyść",
+    "edit" : "Edytuj",
+    "cancel" : "Anuluj",
+    "addToShoppingList" : "Dodaj do listy zakupów",
+    "newRecipe" : "Dodaj przepis",
+    "signIn": "Zaloguj",
+    "signUp": "Zarejestruj"
+  },
+  "signIn": {
+    "mainHeader" : "Zaloguj się na swoje konto :)",
+    "email": "Email",
+    "password" : "Hasło",
+    "confirmPassword": "Potwierdź hasło",
+    "signIn": "Zaloguj się",
+    "goToSignUp": "Zarejestruj się",
+    "signUp": "Rejestracja"
+  },
+  "success" : {
+    "signIn" : "Pomyślnie zalogowano",
+    "signUp" : "Konto zostało założone :)",
+    "onDelete" : "Pomyślnie skasowano przepis",
+    "logout": "Pomyślnie wylogowano"
+  },
+  "error" : {
+    "onDelete" : "Nie udało się usunąć przepisu",
+    "passwordsDidNotMatch" : "Hasła nie są identyczne",
+    "Password should be at least 6 characters" : "Hasło musi mieć minimum 6 znaków",
+    "The email address is already in use by another account." : "Wybrany email jest już zarejestrowany"
+  }
+}

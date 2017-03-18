@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form id="shopping-list-add" (ngSubmit)="onAdd(form.value)" #form="ngForm">
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label for="item-name" [innerHtml]="'shoppingList.name' | translate"></label>
+          <input type="text" id="item-name" required class="form-control" [ngModel]="item.name" name="name">
+        </div>
+
+        <div class="col-sm-2 form-group">
+          <label for="item-amount" [innerHtml]="'shoppingList.amount' | translate"></label>
+          <input type="text" id="item-amount" required class="form-control" [ngModel]="item.amount" name="amount">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="btn btn-success" type="submit" *ngIf="isAdd" [disabled]="!form.valid" [innerHtml]="'buttons.add' | translate"></button>
+          <button class="btn btn-success" type="submit" *ngIf="!isAdd" [disabled]="!form.valid" [innerHtml]="'buttons.save' | translate"></button>
+          <button class="btn btn-danger" type="button" *ngIf="!isAdd" (click)="onDelete()" [innerHtml]="'buttons.deleteItem' | translate"></button>
+          <button class="btn btn-primary" type="button" *ngIf="!isAdd" (click)="onClear()" [innerHtml]="'buttons.clear' | translate"></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

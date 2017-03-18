@@ -1,0 +1,27 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="'/'" [innerHtml]="'header.recipeBook' | translate"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a [routerLink]="'/recipes'" [innerHtml]="'header.recipes' | translate"> </a></li>
+        <li routerLinkActive="active"><a [routerLink]="'/shopping-list'" [innerHtml]="'header.shoppingList' | translate"></a></li>
+        <li routerLinkActive="active"><a [routerLink]="'/dashboard'" [innerHtml]="'header.dashboard' | translate"></a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown" rbDropdown>
+          <a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" [innerHtml]="'header.recipeManagement' | translate"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a [innerHtml]="'header.storeRecipes' | translate" (click)="storeRecipes()"></a></li>
+            <li><a [innerHtml]="'header.retrieveRecipes' | translate" (click)="fetchRecipes()"></a></li>
+          </ul>
+        </li>
+        <li routerLinkActive="active" class="dropdown" rbDropdown>
+          <a *ngIf="!isAuthenticated()" [routerLink]="'/signin'" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" [innerHtml]="'header.signIn' | translate"><span class="caret"></span></a>
+          <a *ngIf="isAuthenticated()" (click)="logout()" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" [innerHtml]="'header.logOut' | translate"><span class="caret"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
